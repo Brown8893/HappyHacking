@@ -1,5 +1,4 @@
-# Part_1.JavaScript實戰篇
-## Ch02_用JavaScript驗證表單
+# Ch02_用JavaScript驗證表單
 >* 【Ex2-1 最簡單表單的HTML結構】
 ```
 <!DOCTYPE html>

@@ -11,7 +11,7 @@
  <div  id="bigPhoto"><img  id="bigPhotoSrc"  src="photo01.jpg" width="620" height="450" border="0" alt=""></div>
  <div id="smallPhotos">
    <span id="prve"></span>
-   <ul id="smallPhotoList"></ul>
+   <ul id="smallPhotosList"></ul>
    <span id="next"></span>
  </div>
  <script src="eg3.js"></script>
@@ -26,19 +26,19 @@
 #smallPhotos{width:620px; margin: 10px 0;}
 #smallPhotoList{margin: 0 auto; width:580px; float:left;padding: 0;}
 #smallPhotoList li{
-       float:left;            //左浮動
-	   margin-left: 10px;     //左外邊距10像素
-	   _margin-left:8px;      //這是專門針對IE6間隙太大而設置的
+       float:left;                        //左浮動
+	   margin-left: 10px;             //左外邊距10像素
+	   _margin-left:8px;              //這是專門針對IE6間隙太大而設置的
 }
-#smallPhotoList img{
+#smallPhotosList img{
        border:2px solid #000;
-	   cursor:pointer;
+	   cursor:pointer;                //鼠標樣式
 }
 #prve{
         background: url(icon_prve.jpg);
 		height: 40px;
 		width:20px;
-		display: inline-block;
+		display: inline-block;    //讓span標籤變成塊級元素
 		float: left;
 		cursor:pointer;
 }

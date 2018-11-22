@@ -51,4 +51,45 @@
 		cursor:pointer;
 }
 ```
->* 【Ex3-3 】
+>* 【Ex3-3 照片顯示的JavaScript代碼】
+```
+eg.data = [
+       ["photo01.jpg","thumb01.jpg"]
+	   ,["photo02.jpg","thumb02.jpg"]
+	   ,["photo03.jpg","thumb03.jpg"]
+	   ,["photo04.jpg","thumb04.jpg"]
+	   ,["photo05.jpg","thumb05.jpg"]
+	   ,["photo06.jpg","thumb06.jpg"]
+	   ,["photo07.jpg","thumb07.jpg"]
+	   ,["photo01.jpg","thumb01.jpg"]
+	   ,["photo02.jpg","thumb02.jpg"]
+	   ,["photo03.jpg","thumb03.jpg"]
+	   ,["photo04.jpg","thumb04.jpg"]
+	   ,["photo05.jpg","thumb05.jpg"]
+	   ,["photo06.jpg","thumb06.jpg"]
+	   ,["photo07.jpg","thumb07.jpg"]
+];
+eg.shoeNumber = 0;                                  //默認顯示
+eg.groupNumber = 1;                                 //當前顯示的組
+eg.groupSize = 6;                                   //每組的數量
+eg.showThumb = function(group){             
+       var ul = eg.$("smallPhotosList");
+	   ul.innerHTML = '';                       //每次顯示時要清空舊的內容
+	   var start = (group-1)*eg.groupSize;      //計算需要的data數據的開始位置
+	   var end = group*eg.groupSize             //計算需要的end數據的開始位置
+	   for(var i=start;(i<end&&i<eg.data.length);i++){
+	          //循環數據，並根據數據生成HTML後插入小圈列表裡
+			  var li = document.createElement("li");
+			  il.innerHTML = '<img src="'+eg.data[i][l]+'" id="thumb'+ i+'"width="80" height="40"/>';
+			  ul.appendChild(li);        //追加元素
+	   }
+};
+eg.init = function(){
+       eg.showThumb(1);                             //初始化要顯示的
+};
+eg.init();
+```
+>* 【Ex3-4 響應小照片單擊動作】
+```
+
+```

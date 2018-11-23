@@ -91,5 +91,28 @@ eg.init();
 ```
 >* 【Ex3-4 響應小照片單擊動作】
 ```
+eg.showThumb = function(group){
+       var ul = eg.$("smallPhotosList");
+	   ul.innerHTML = '';                                       //每次顯示時都要清空舊的內容
+	   var start = (group-1)*eg.groupSize;                      //計算需要的data數據的開始位置
+	   var end = group*eg.groupSize;                            //計算需要的data數據的結束位置
+	   for (var i=start;(i<end&&i<eg.data.length);i++){
+	           var li = document.createElement("li");
+			   li.innerHTML = '<img src = "'+eg.data[i][l]+'"id="thumb'+i+'"width ="80" height="40"/>';
+			   (function(i){
+			          eg.addListener(li,"click",function(){     //增加click事件監聽
+					         eg.showNumber = i;         //紀錄選中的圖標序號，供其他函數調用
+							 eg.showBig();
+					  });
+			   })(i);                                           //將i作為值傳遞進去
+			   ul.appendChild(li);
+	   }
+};
+eg.showBig = function(){                     //根據某個編號顯示大圖
+       eg.$("bigPhotoSrc").src = eg.$("thumb"+eg.showNumber).src.replace("thumb","photo");
+};
+```
+>* 【Ex3-5 響應小照片上一組或下一組單擊動作】
+```
 
 ```

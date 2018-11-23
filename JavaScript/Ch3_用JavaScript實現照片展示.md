@@ -115,26 +115,15 @@ eg.showBig = function(){                     //根據某個編號顯示大圖
 >* 【Ex3-5 響應小照片上一組或下一組單擊動作】
 ```
 eg.init = function(){
-		eg.showThumb(1);	//初始化要顯示的
-		                       //綁定上一組,下一組
+		eg.showThumb(1);		         //初始化要顯示的
 		eg.addListener(eg.$("next"),"click",function(){
 			eg.nextThumb();
 		});
 		eg.addListener(eg.$("prve"),"click",function(){
 			eg.prveThumb();
 		});
-		eg.addListener(document,"keyup",function(e){
-			e = e || event;
-			if(e.keyCode == 37){
-				eg.prvePhoto();
-			}
-			if(e.keyCode == 39){
-				eg.nextPhoto();
-			}
-		});
 	};
-	eg.init();
-	eg.nextThumb = function(){
+	eg.nextThumb = function(){           //顯示下一組小圖列表
 		if((eg.groupNumber*eg.groupSize) +1 <= eg.data.length){
 			eg.showThumb(eg.groupNumber+1);
 			eg.showNumber = eg.groupNumber*eg.groupSize;
@@ -142,7 +131,7 @@ eg.init = function(){
 			eg.groupNumber++;
 		}
 	};
-	eg.prveThumb = function(){
+	eg.prveThumb = function(){           //顯示上一組小圖列表
 		if(eg.groupNumber - 1>=1){
 			eg.showThumb(eg.groupNumber-1);			
 			eg.groupNumber--;

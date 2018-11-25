@@ -1,4 +1,4 @@
-# Ch3_用JavaScript實現照片展示
+# Ch03_用JavaScript實現照片展示
 >* 【Ex3-1 照片展示的HTML代碼】
 ```
 <!DOCTYPE html>

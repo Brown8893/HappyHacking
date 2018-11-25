@@ -113,5 +113,62 @@ eg.AJAX = function(config,callback){	//接受一個回呼函數和一個配置�
 ```
 >* 【Ex4-6 AJAX獲取XML內容】
 ```
+<html>
+ <head>
+  <title>hello ajax xml</title>
+ </head>
+ <body>
+	<div id="myajax">hello world!</div>
+	<button type="button" id="ajaxBtn">通過 AJAX 獲取xml內容</button>
+	<script src="eg.lib.js"></script>
+ </body>
+</html>
+<script>
+(function(){//避免全域污染,將操作放在閉包裡
+	var ajaxBtn = eg.$("ajaxBtn");//取得username的DOM對象，eg.$方法定義在eg.lib.js，詳見第2章範例
+	//給userName物件綁定一個onkeyup事件，eg.addListener方法定義在eg.lib.js，詳見第2章範例
+	eg.addListener(ajaxBtn,"click",function(){
+		eg.AJAX({TYPE:"GET",//AJAX請求類型
+			URL:"4-6.xml",//AJAX請求的URL，該檔就是範例4-2的代碼
+			ISASYN:true//是否非同步
+		},function(txt,xml){//定義AJAX請求成功後的callback回呼函數
+            var root = xml.getElementsByTagName("name");
+			eg.$("myajax").innerHTML =  root[0].childNodes[0].nodeValue;
+		});
+	});
+})();
+</script>
+
+```
+>* 【Ex4-7 AJAX獲取JSON內容】
+```
+<html>
+ <head>
+  <title>hello ajax JSON</title>
+ </head>
+ <body>
+	<div id="myajax">hello world!</div>
+	<button type="button" id="ajaxBtn">通過 AJAX 獲取 JSON 內容</button>
+	<script src="eg.lib.js"></script>
+ </body>
+</html>
+<script>
+(function(){//避免全域污染,將操作放在閉包裡
+	var ajaxBtn = eg.$("ajaxBtn");//取得username的DOM對象，eg.$方法定義在eg.lib.js，詳見第2章範例
+	//給userName物件綁定一個onkeyup事件，eg.addListener方法定義在eg.lib.js，詳見第2章範例
+	eg.addListener(ajaxBtn,"click",function(){
+		eg.AJAX({TYPE:"GET",//AJAX請求類型
+			URL:"4-7.txt",//AJAX請求的URL，該檔就是範例4-3的JSON代碼
+			ISASYN:true//是否非同步
+		},function(txt,xml){//定義AJAX請求成功後的callback回呼函數
+			var json = new Function("return "+txt)();//簡單的JSON字串轉換為JavaScript物件
+			eg.$("myajax").innerHTML = json.name;//輸出用戶名
+		});
+	});
+})();
+</script>
+```
+>* 【Ex4-8 傳統網頁提交】
+```
 
 ```

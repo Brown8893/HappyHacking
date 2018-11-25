@@ -142,5 +142,50 @@ eg.init = function(){
 ```
 >* 【Ex3-6 響應鍵盤動作】
 ```
-
+eg.init = function(){
+      eg.showThumb(1);            //初始化要顯示的小圖列表
+	  eg.addListener(eg.$("next"),"click",function(){
+	                              //單擊上一組圖標時
+	        eg.nextThumb();       //顯示下一組小圖列表
+	  });
+	  eg.addListener(eg.$("prve"),"click",function(){
+	                              //單擊下一組圖標時
+			eg.prveThumb();       //顯示上一組小圖列表
+});
+	        eg.addListener(document,"keyup",function(e){
+			       e = e || event;
+				   if(e.keycode == 37){       //按左方向←時
+				          eg.prvePhoto();     //顯示上一張大圖
+				   if(e.keycode == 39){       //按右方向時→時
+				          eg.nextPhoto();     //顯示下一張大圖
+				   }
+			});
+};
+eg.nextPhoto = function(){
+       if(eg.showNumber%eg.groupSize == (eg.groupSize-1)){
+	          eg.showThumb()
+	   }else if(eg.showNumber<eg.data.length-1){
+	          eg.showNumber++;
+			  eg.showBig();       //顯示大圖
+	   }
+};
+eg.prvePhoto = function(){
+      if(eg.showNumber == ((eg.groupNumber-1)*eg.groupSize)){
+	         eg.prveThumb()
+	  }else if(eg.showNumber>0){
+	         eg.showNumber--;
+			 eg.showBig();
+	  }
+};
+```
+>* 【Ex3-7 另一種風格照片展示CSS代碼】
+```
+ul,li{list-style: none;}
+#bigPhoto{width:620px;float:left;}       //指定寬度，向左移動
+#smallPhotos{width:100px; float:left;}   //指定寬度，也讓小圖列表靠緊大圖向左移動
+#smallPhotosList{ margin: 0 auto; width:100px; padding: 0;}
+#smallPhotosList li{margin-left: 10px;margin-top: 10px;}
+#smallPhotosList img{border:5px; solid #000;cursor:pointer;}
+#prev{background:url(icon_prev2.jpg);height:20px;width:40px;margin-left:30px; display: inline-block;cursor:pointer;}
+#next{background:url(icon_prev2.jpg);height:20px;width:40px;margin-left:30px; display: inline-block;cursor:pointer;}
 ```

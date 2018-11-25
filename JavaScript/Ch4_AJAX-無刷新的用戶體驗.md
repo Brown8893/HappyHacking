@@ -20,5 +20,13 @@
 ```
 >* 【Ex4-2 最簡單的XML格式】
 ```
+<?xml version="1.0" encoding="UTF-8"?>
+<user>
+      <name>z3f</name>
+	  <homepage>www.z3f.me</homepage>
+</user>
+```
+>* 【Ex4-3 最簡單的JSON格式】
+```
 
 ```

@@ -28,5 +28,9 @@
 ```
 >* 【Ex4-3 最簡單的JSON格式】
 ```
+("name":"z3f","homepage":"www.z3f.me")
+```
+>* 【Ex4-4 helloajax】
+```
 
 ```

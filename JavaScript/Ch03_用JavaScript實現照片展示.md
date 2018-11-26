@@ -8,7 +8,7 @@
 #### (6)最大限度凝聚原則(Maximize Cohesion)
 #### (7)避免過早優化(Avoid Premature Optimization)
 ### 3.1.1 HTML,CSS和JavaScript的分層關係
-#### HTML→.html、JavaScript→.JS、CSS→.
+#### HTML→.html、JavaScript→.js、CSS→.css
 #### JavaScript的誕生是要讓HTML更豐富
 >* 【Ex3-1 照片展示的HTML代碼】
 ```

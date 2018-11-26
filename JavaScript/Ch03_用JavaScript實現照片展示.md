@@ -1,4 +1,15 @@
 # Ch03_用JavaScript實現照片展示
+## 3.1 功能設計
+#### (1)避免重複原則(DRY, Don't Repeat Youself)
+#### (2)簡單原則(Keep It Simple and Stupid)
+#### (3)低耦合原則(Minimize Coupling)
+#### (4)別讓我思考(Don't make me think)
+#### (5)單一責任原則(Single Responsibility Principle)
+#### (6)最大限度凝聚原則(Maximize Cohesion)
+#### (7)避免過早優化(Avoid Premature Optimization)
+### 3.1.1 HTML,CSS和JavaScript的分層關係
+#### HTML→.html、JavaScript→.JS、CSS→.
+#### JavaScript的誕生是要讓HTML更豐富
 >* 【Ex3-1 照片展示的HTML代碼】
 ```
 <!DOCTYPE html>

@@ -10,6 +10,7 @@
 ### 3.1.1 HTML,CSS和JavaScript的分層關係
 #### HTML→.html、JavaScript→.js、CSS→.css
 #### JavaScript的誕生是要讓HTML更豐富
+### 3.1.2 照片展示功能設計
 >* 【Ex3-1 照片展示的HTML代碼】
 ```
 <!DOCTYPE html>

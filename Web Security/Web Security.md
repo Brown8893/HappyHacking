@@ -8,3 +8,4 @@
 >* 5.WAF(Web Application Firewall)網站應用程式防火牆
 
 https://www.greycampus.com/blog/information-security/owasp-top-vulnerabilities-in-web-applications
+https://github.com/OWASP/Top10/blob/master/2017/OWASP%20Top%2010-2017%20(en).pdf

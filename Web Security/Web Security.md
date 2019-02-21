@@ -6,3 +6,7 @@
 >* 3.漏洞掃描
 >* 4.滲透測試
 >* 5.WAF(Web Application Firewall)網站應用程式防火牆
+
+```
+https://www.greycampus.com/blog/information-security/owasp-top-vulnerabilities-in-web-applications
+```

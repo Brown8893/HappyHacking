@@ -13,7 +13,7 @@ A9:2017-Using Components with Known Vulnerabilities
 A10:2017-Insufficient Logging&Monitoring
 ```
 
-# A1_2017-Injection
+**A1_2017-Injection**
 >* Injection flaws, such as SQL, NoSQL, OS, and LDAP injection, occur when untrusted data is sent to an interpreter as part of a command or query. The attacker's hostile data can trick the interpreter into executing unintended commands or accessing data without proper authorization.
 # A2_2017-Broken Authentication
 >* Application functions related to authentication and session management are often implemented incorrectly, allowing attackers to compromise passwords, keys, or session tokens, or to exploit other implementation flaws to assume other users' identities temporarily or permanently.

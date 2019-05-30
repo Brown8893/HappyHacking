@@ -31,3 +31,6 @@ java -jar /home/ksu/WebGoat/webgoat-container-7.1-exec.jar -httpPort=8081 </dev/
 cd /home/ksu/juice-shop
 npm start </dev/null &>/dev/null &
 ```
+
+### AI for high→Keras_Neural_Style_Transfer_with_Eager_Execution.ipynb
+https://github.com/MyDearGreatTeacher/AI4high/blob/master/Keras_Neural_Style_Transfer_with_Eager_Execution.ipynb

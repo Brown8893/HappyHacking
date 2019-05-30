@@ -1,7 +1,6 @@
 # HappyHacking
 
 # LearningWebSecurity
-https://github.com/MyDearGreatTeacher/AI4high/blob/master/Keras_Neural_Style_Transfer_with_Eager_Execution.ipynb
 
 # 網站安全漏洞平台:實戰
 ```

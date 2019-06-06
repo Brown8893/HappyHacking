@@ -15,7 +15,11 @@ $("p.test").hide() - 隱藏所有 class="test" 的 <p> 元素
 $("#test").hide() - 隱藏所有 id="test" 的元素
 ```
 
-###
+## 範例一:
+```
+
+```
+
 ```
 <!DOCTYPE html>
 <html>
@@ -51,7 +55,8 @@ $(document).ready(function(){
 
 ```
 
-###
+## 範例二:
+
 ```
 <html>
 <head>
@@ -75,7 +80,11 @@ $(document).ready(function(){
 </html>
 ```
 
-###
+## 範例三:
+
+```
+資料來雲:http://www.w3school.com.cn/jquery/jquery_animate.asp
+```
 ```
 <!DOCTYPE html>
 <html>
